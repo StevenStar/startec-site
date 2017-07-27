@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<md-toolbar color="primary" class="header">
+    <img height="30" src="../assets/images/logo.png">
+</md-toolbar>
+<form class="search-form">
+    <md-button-toggle-group #group="mdButtonToggleGroup" class="search-btn-toggle">
+        <md-button-toggle value="left">
+            <span>test</span>
+        </md-button-toggle>
+        <md-button-toggle value="center">
+            <span>test</span>
+        </md-button-toggle>
+        <md-button-toggle value="right">
+            <span>test</span>
+        </md-button-toggle>
+    </md-button-toggle-group>
+    <md-input-container class="search-input">
+        <input type="text" name="search" mdInput placeholder="请输入关键字" value="">
+    </md-input-container>
+    <md-button-toggle-group #group="mdButtonToggleGroup" class="search-btn-toggle">
+        <md-button-toggle value="left">
+            <span>test</span>
+        </md-button-toggle>
+        <md-button-toggle value="center">
+            <span>test</span>
+        </md-button-toggle>
+        <md-button-toggle value="right">
+            <span>test</span>
+        </md-button-toggle>
+    </md-button-toggle-group>
+</form>
+<md-grid-list cols="4" rowHeight="11:8" class="search-content" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+    <md-grid-tile colspan="1" rowspan="1" style="background: lightblue;">
+        <p>1</p>
+    </md-grid-tile>
+    <md-grid-tile colspan="3" rowspan="1" style="background: lightblue;">
+        <p>2</p>
+    </md-grid-tile>
+</md-grid-list>
+<md-toolbar color="primary" class="footer">
+    <img height="30" src="../assets/images/logo.png">
+    <span class="footer-title">智能导航</span>
+    <div class="copy-right">Powered by steven.wang.</div>
+</md-toolbar>

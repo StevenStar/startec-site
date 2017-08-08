@@ -1,0 +1,61 @@
+// app/styles/search.scss
+@import "../../bower_components/bootstrap/dist/css/bootstrap.min.css";
+@import "./_parts/variables";
+
+*, *:before, *:after {
+    border-radius: 0 !important;
+}
+
+body {
+    font-size: 10px;
+}
+
+.header {
+    .navbar {
+        background-color: $theme-top;
+        margin-bottom: 0;
+        border-color: transparent;
+        box-shadow: 0 0 2px $theme-top;
+        .navbar-header {
+            .navbar-toggle {
+                border-color: transparent;
+                .icon-bar {
+                    background-color: #fff;
+                }
+                &:hover, &:focus {
+                    background-color: #fff;
+                    .icon-bar {
+                        background-color: $theme-color;
+                    }
+                }
+            }
+            .navbar-brand {
+                font-size: 1.6rem;
+                color: #fff;
+            }
+        }
+        .navbar-collapse {
+            border-color: transparent;
+            .nav {
+                &.navbar-nav {
+                    > li {
+                        > a {
+                            font-size: 1.3rem;
+                            color: #fff;
+                            &:hover, &:focus {
+                                color: darken(#fff, 10%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.search-container {
+    padding: 0;
+    background-color: red;
+    .iframe-container {
+        background-color: red;
+    }
+}

@@ -1,0 +1,241 @@
+// app/styles/index.scss
+@import "../../bower_components/bootstrap/dist/css/bootstrap.min.css";
+@import "./_parts/variables";
+
+*, *:before, *:after {
+    border-radius: 0 !important;
+}
+
+body {
+    font-size: 10px;
+}
+
+.header {
+    .navbar {
+        background-color: $theme-top;
+        margin-bottom: 0;
+        border-color: transparent;
+        box-shadow: 0 0 2px $theme-top;
+        .navbar-header {
+            .navbar-toggle {
+                border-color: transparent;
+                .icon-bar {
+                    background-color: #fff;
+                }
+                &:hover, &:focus {
+                    background-color: #fff;
+                    .icon-bar {
+                        background-color: $theme-color;
+                    }
+                }
+            }
+            .navbar-brand {
+                font-size: 1.6rem;
+                color: #fff;
+            }
+        }
+        .navbar-collapse {
+            border-color: transparent;
+            .nav {
+                &.navbar-nav {
+                    > li {
+                        > a {
+                            font-size: 1.3rem;
+                            color: #fff;
+                            &:hover, &:focus {
+                                color: darken(#fff, 10%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.form-container {
+    padding: 0;
+    background-color: $theme-color;
+    height: 180px;
+    box-shadow: 0 0 5px $theme-color;
+    padding: 20px 0;
+    .container {
+        .row {
+            .col-sm-10.col-md-6 {
+                .btn-toolbar {
+                    padding: 10px 0;
+                    .btn-group {
+                        .btn.btn-link {
+                            text-decoration: none;
+                            padding: 0.5rem 1rem;
+                            font-size: 1.3rem;
+                            line-height: 1;
+                            color: #fff;
+                            &:hover, &:focus {
+                                color: darken(#fff, 10%);
+                                background-color: darken($theme-color, 10%);
+                            }
+                        }
+                        &.active {
+                            .btn.btn-link {
+                                background-color: #fff;
+                                color: $theme-color;
+                            }
+                        }
+                    }
+                }
+                .input-group {
+                    .form-control {
+                        font-size: 1.3rem;
+                        border: 0;
+                    }
+                    .input-group-btn {
+                        background-color: #fff;
+                        .btn.btn-link {
+                            text-decoration: none;
+                            border-width: 0;
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.search-container {
+    .container {
+        .row {
+            .col-sm-12.col-md-2 {
+                .search-left {
+                    padding-top: 20px;
+                    .list-group {
+                        border-left: 1px solid $theme-title;
+                        margin: 0;
+                        .list-group-item {
+                            border: 0;
+                            padding: 0.5rem 0;
+                            text-align: center;
+                            .e-popover {
+                                font-size: 1.2rem;
+                                padding: 0;
+                                color: #444;
+                                &:hover, &:focus {
+                                    color: $theme-title;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+                .search-advert {
+                    margin-top: 10px;
+                    background-color: $theme-color;
+                    .advert-title {
+                        margin: 0;
+                        font-size: 1rem;
+                        height: 100px;
+                        line-height: 100px;
+                        color: #fff;
+                        text-align: center;
+                    }
+                    &.advert-item1 {
+                        background-color: #3f51b5;
+                    }
+                    &.advert-item2 {
+                        background-color: #6200ae;
+                    }
+                    &.advert-item3 {
+                        background-color: #673ab7;
+                    }
+                    &.advert-item4 {
+                        background-color: #9c27b0;
+                    }
+                }
+            }
+            .tab-list {
+                .tab-items {
+                    padding-top: 20px;
+                    position: relative;
+                    .tab-title {
+                        position: absolute;
+                        left: 0;
+                        top: 20px;
+                        background-color: $theme-title;
+                        color: #fff;
+                        width: 100px;
+                        padding: 0;
+                        margin: 0;
+                        height: 35px;
+                        line-height: 35px;
+                        text-align: center;
+                        font-size: 1.4rem;
+                    }
+                    .nav.nav-tabs {
+                        padding-left: 100px;
+                        border-bottom: 1px solid $theme-title;
+                        .nav-item {
+                            .nav-link {
+                                border: 0;
+                                padding: 0 15px;
+                                height: 35px;
+                                line-height: 35px;
+                                color: #444;
+                                white-space: nowrap;
+                                &:hover, &:focus {
+                                    background-color: transparent;
+                                }
+                            }
+                            &.active {
+                                > a {
+                                    color: $theme-title;
+                                    border-bottom: 1px solid $theme-title;
+                                    &:hover, &:focus {
+                                        color: $theme-title;
+                                        border-bottom: 1px solid $theme-title;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .tab-content {
+                        padding: 15px 0;
+                        .tab-pane {
+                            .nav.navbar-nav {
+                                > li.nav-item {
+                                    float: left;
+                                    > a {
+                                        padding: 0.5rem 1rem;
+                                        color: #444;
+                                        width: 10rem;
+                                        white-space: nowrap;
+                                        &:hover, &:focus {
+                                            color: $theme-title;
+                                            background-color: transparent;
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.footer {
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+    padding: 15px 0;
+    .nav.navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: #666;
+                padding: 0 10px;
+                &:hover, &:focus {
+                    color: $theme-color;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

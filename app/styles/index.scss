@@ -1,5 +1,4 @@
 // app/styles/index.scss
-@import "../../bower_components/bootstrap/dist/css/bootstrap.min.css";
 @import "./_parts/variables";
 
 *, *:before, *:after {
@@ -12,10 +11,11 @@ body {
 
 .header {
     .navbar {
-        background-color: $theme-top;
+        background-color: $theme-color;
         margin-bottom: 0;
         border-color: transparent;
-        box-shadow: 0 0 2px $theme-top;
+        border-bottom: 1px solid darken($theme-color, 4%);
+        box-shadow: 0 0 2px $theme-color;
         .navbar-header {
             .navbar-toggle {
                 border-color: transparent;
@@ -55,7 +55,6 @@ body {
 .form-container {
     padding: 0;
     background-color: $theme-color;
-    height: 180px;
     box-shadow: 0 0 5px $theme-color;
     padding: 20px 0;
     .container {
@@ -108,7 +107,7 @@ body {
                 .search-left {
                     padding-top: 20px;
                     .list-group {
-                        border-left: 1px solid $theme-title;
+                        border-left: 4px solid $theme-color;
                         margin: 0;
                         .list-group-item {
                             border: 0;

@@ -2,25 +2,20 @@
 <html lang="">
     <head>
         <meta charset="utf-8">
-            <meta content="" name="description">
-                <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-                    <title>
-                        Startec
-                    </title>
-                    <link href="apple-touch-icon.png" rel="apple-touch-icon">
-                        <!-- Place favicon.ico in the root directory -->
-                        <!-- build:css styles/vendor.css -->
-                        <!-- bower:css -->
-                        <!-- endbower -->
-                        <!-- endbuild -->
-                        <!-- build:css styles/index.css -->
-                        <link href="styles/index.css" rel="stylesheet">
-                            <!-- endbuild -->
-                        </link>
-                    </link>
-                </meta>
-            </meta>
-        </meta>
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+        <title>智能导航</title>
+        <meta content="智能导航，源于简单，随时随地，快乐冲浪" name="description"/>
+        <meta content="智能导航，多空能导航" name="keywords"/>
+        <link href="apple-touch-icon.png" rel="apple-touch-icon"></link>
+        <!-- Place favicon.ico in the root directory -->
+        <!-- build:css styles/vendor.css -->
+        <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+        <!-- bower:css -->
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css styles/index.css -->
+        <link href="styles/index.css" rel="stylesheet"></link>
+        <!-- endbuild -->
     </head>
     <body>
         <!--[if IE]>
@@ -66,35 +61,45 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
-                        <div aria-label="..." class="btn-toolbar" role="toolbar">
-                            <div aria-label="..." class="btn-group active" role="group">
+                        <div aria-label="searchTab" class="btn-toolbar" role="toolbar" id="search_type">
+                            <div aria-label="searchType" data-type="web" class="btn-group active" role="group">
                                 <button class="btn btn-link" type="button">
                                     网页
                                 </button>
                             </div>
-                            <div aria-label="..." class="btn-group" role="group">
+                            <div aria-label="searchType" data-type="movie" class="btn-group" role="group">
                                 <button class="btn btn-link" type="button">
                                     影视
                                 </button>
                             </div>
-                            <div aria-label="..." class="btn-group" role="group">
+                            <div aria-label="searchType" data-type="cloudpan" class="btn-group" role="group">
+                                <button class="btn btn-link" type="button">
+                                    网盘
+                                </button>
+                            </div>
+                            <div aria-label="searchType" data-type="bt" class="btn-group" role="group">
                                 <button class="btn btn-link" type="button">
                                     BT种子
                                 </button>
                             </div>
-                            <div aria-label="..." class="btn-group" role="group">
+                            <div aria-label="searchType" data-type="software" class="btn-group" role="group">
                                 <button class="btn btn-link" type="button">
                                     软件
                                 </button>
                             </div>
-                            <div aria-label="..." class="btn-group" role="group">
+                            <div aria-label="searchType" data-type="music" class="btn-group" role="group">
                                 <button class="btn btn-link" type="button">
                                     音乐
                                 </button>
                             </div>
-                            <div aria-label="..." class="btn-group" role="group">
+                            <div aria-label="searchType" data-type="sucai" class="btn-group" role="group">
                                 <button class="btn btn-link" type="button">
                                     素材
+                                </button>
+                            </div>
+                            <div aria-label="searchType" data-type="book" class="btn-group" role="group">
+                                <button class="btn btn-link" type="button">
+                                    电子书
                                 </button>
                             </div>
                         </div>
@@ -102,46 +107,42 @@
                     <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
                         <form id="search_form" action="search.html">
                             <div class="input-group">
-                                <input class="form-control" placeholder="请输入您要查询的网页内容" type="text" id="search" name="search">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-link" type="submit">
-                                            查询
-                                        </button>
-                                    </span>
-                                </input>
+                                <input class="form-control" placeholder="网页搜索" type="text" id="keywords" name="keywords"/>
+                                <input type="hidden" name="type" value="web"/>
+                                <input type="hidden" name="name" value="谷歌"/>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-link" type="submit">
+                                        查询
+                                    </button>
+                                </span>
                             </div>
                         </form>
                     </div>
                     <div class="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
-                        <div aria-label="..." class="btn-toolbar" role="toolbar">
-                            <div aria-label="..." class="btn-group active" role="group">
-                                <button class="btn btn-link" type="button">
-                                    谷歌
-                                </button>
+                        <div aria-label="searchTools" class="btn-toolbar" role="toolbar" id="search_tools">
+                            <div aria-label="searchTool" class="btn-group active" role="group">
+                                <button class="btn btn-link" type="button">谷歌</button>
                             </div>
-                            <div aria-label="..." class="btn-group" role="group">
-                                <button class="btn btn-link" type="button">
-                                    百度
-                                </button>
+                            <div aria-label="searchTool" class="btn-group" role="group">
+                                <button class="btn btn-link" type="button">百度</button>
                             </div>
-                            <div aria-label="..." class="btn-group" role="group">
-                                <button class="btn btn-link" type="button">
-                                    必应
+                            <div aria-label="searchTool" class="btn-group" role="group">
+                                <button class="btn btn-link" type="button">必应</button>
                             </div>
-                            <div aria-label="..." class="btn-group" role="group">
-                                <button class="btn btn-link" type="button">
-                                    好搜
-                                </button>
+                            <div aria-label="searchTool" class="btn-group" role="group">
+                                <button class="btn btn-link" type="button">搜狗</button>
                             </div>
-                            <div aria-label="..." class="btn-group" role="group">
-                                <button class="btn btn-link" type="button">
-                                    微信
-                                </button>
+                            <div aria-label="searchTool" class="btn-group" role="group">
+                                <button class="btn btn-link" type="button">好搜</button>
                             </div>
-                            <div aria-label="..." class="btn-group" role="group">
-                                <button class="btn btn-link" type="button">
-                                    知乎
-                                </button>
+                            <div aria-label="searchTool" class="btn-group" role="group">
+                                <button class="btn btn-link" type="button">搜微信</button>
+                            </div>
+                            <div aria-label="searchTool" class="btn-group" role="group">
+                                <button class="btn btn-link" type="button">搜知乎</button>
+                            </div>
+                            <div aria-label="searchTool" class="btn-group" role="group">
+                                <button class="btn btn-link" type="button">Yandex</button>
                             </div>
                         </div>
                     </div>
@@ -722,6 +723,11 @@
                         </a>
                     </li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <p style="color: #999;">Power By Steven.Wang</p>
+                    </li>
+                </ul>
             </div>
         </div>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -734,8 +740,8 @@
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:js scripts/index.js -->
-        <script src="scripts/index.js">
-        </script>
+        <script src="scripts/data.js"></script>
+        <script src="scripts/index.js"></script>
         <!-- endbuild -->
     </body>
 </html>
